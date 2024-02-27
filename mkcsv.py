@@ -9,8 +9,6 @@ import csv
 import numpy as np
 
 def npz_csv(system='Linux',csv_task_name='datasets_v217'):
-    datasets_config = {}
-        datasets_config = dataset_config_windows
     if system == 'Linux':
         dataset_config_linux = {
             'Flare22': {
@@ -49,31 +47,31 @@ def npz_csv(system='Linux',csv_task_name='datasets_v217'):
         datasets_config = dataset_config_linux
     # csv_file_path = './lists/datasets_v10.csv'
     csv_file_path = f'./lists/{csv_task_name}.csv'
-    # 确保CSV文件的目录存在
+
     os.makedirs(os.path.dirname(csv_file_path), exist_ok=True)
 
-    # 打开CSV文件进行写入
+
     with open(csv_file_path, 'w', newline='') as file:
         writer = csv.writer(file, delimiter=',')
-        # 写入CSV文件头
+
         writer.writerow(["data_dir", "img_idx", "label_idx", "dataset_id", "predict_head", "n_classes"])
 
-        # 遍历配置中的每个数据集
+
         for dataset_name, config in datasets_config.items():
-            # 列出data_dir中所有的.npz文件
+
             data_files = [f for f in os.listdir(config['data_dir']) if f.endswith('.npz')]
 
-            # 为找到的每个.npz文件写入一行
+
             for npz_file in data_files:
                 npz_file_path = os.path.join(config['data_dir'], npz_file)
 
                 writer.writerow([
-                    npz_file_path,  # .npz文件的完整路径
-                    config['img_idx'],  # 图像索引
-                    config['label_idx'],  # 标签索引
-                    config['dataset_id'],  # 数据集ID
-                    config['predict_head'],  # 预测头
-                    config['num_classes'],  # 类别数量
+                    npz_file_path,
+                    config['img_idx'],
+                    config['label_idx'],
+                    config['dataset_id'],
+                    config['predict_head'],
+                    config['num_classes'],
                 ])
 
 def npz_csv_testing():
