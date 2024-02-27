@@ -145,7 +145,7 @@ if __name__ == "__main__":
     }
 
 
-    num_classes_per_dataset = [14, 3, 16]  # flare22 amos word
+    num_classes_per_dataset = [14, 3, 16]
     # num_classes_per_dataset = [dataset_config[name]['num_classes'] for name in dataset_config]
     dataset_name = args.dataset
     # args.num_classes = dataset_config[dataset_name]['num_classes']

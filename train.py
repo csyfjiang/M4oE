@@ -123,18 +123,6 @@ if __name__ == '__main__':
             'num_classes': 14,
             "predict_head": 0
         },
-        # 'amos': {
-        #     'root_path': './',
-        #     'dataset_id': 1,
-        #     'num_classes': 16,
-        #     "predict_head": 1
-        # },
-        # 'word': {
-        #     'root_path': './',
-        #     'dataset_id': 2,
-        #     'num_classes': 17,
-        #     "predict_head": 2
-        # }
         'ALTAS': {
             'root_path': './',
             'dataset_id': 1,

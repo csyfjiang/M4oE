@@ -129,18 +129,14 @@ def trainer_synapse(args, model, snapshot_path):
             # pass dataset_id and predict_head to model
             outputs = model(image_batch, dataset_id, predict_head)
 
-            for i in range(image_batch.size(0)):  # 假设image_batch的第一维是batch size
-                # 获取对应的损失函数
+            for i in range(image_batch.size(0)):
                 num_classes_i = str(n_classes[i].item())
                 ce_loss_func = ce_loss_functions[num_classes_i]
                 dice_loss_func = dice_loss_functions[num_classes_i]
-
-                # 模型的预测
-                output_i = outputs[i, :n_classes[i].item()].unsqueeze(0)  # 确保输出与类别数匹配
+                output_i = outputs[i, :n_classes[i].item()].unsqueeze(0)
 
                 labels_i = label_batch[i].long().unsqueeze(0)
                 # print(labels_i.unique(), n_classes[i].item())
-                # 计算损失
                 loss_ce_i = ce_loss_func(output_i, labels_i)
 
                 # print(labels_i.unique(),n_classes[i].item())
@@ -224,12 +220,10 @@ def trainer_synapse(args, model, snapshot_path):
                     val_outputs = model(image_batch, dataset_id, predict_head)
 
                     for i in range(image_batch.size(0)):
-                        # 获取对应的损失函数
                         num_classes_i = str(n_classes[i].item())
                         val_ce_loss_func = ce_loss_functions[num_classes_i]
                         val_dice_loss_func = dice_loss_functions[num_classes_i]
 
-                        # 模型的预测
                         output_i = val_outputs[i, :n_classes[i].item()].unsqueeze(0)  # 确保输出与类别数匹配
 
                         labels_i = label_batch[i].long().unsqueeze(0)

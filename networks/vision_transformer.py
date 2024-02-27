@@ -95,13 +95,10 @@ class SwinUnet(nn.Module):
             full_dict = {}
             for k, v in filtered_dict.items():
                 if k in model_dict and model_dict[k].size() == v.size():
-                    # 如果键在模型中存在且大小匹配，则加入到 full_dict 中
                     full_dict[k] = v
                 else:
-                    # 如果键大小不匹配或键不存在于模型中，输出提示信息
                     print("Skipped loading parameter:", k)
 
-            # 加载更新后的 state_dict 到你的模型中
             msg = self.swin_unet.load_state_dict(full_dict, strict=False)
             # print(msg)
         else:

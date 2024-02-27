@@ -141,12 +141,4 @@ if __name__ == "__main__":
         # case_name = sample['case_name']
         print(type(image))
         print(image.shape)
-        # print(case_name)
-        # print(f"Sample {i}:")
-        # # print(iou)
-        # print(image.shape)
-        # print(label.shape)
-        # print(f"Image range: min={np.min(np.array(image))}, max={np.max(np.array(image))}")
-        # # print(f"Image range: min={np.min(image)}, max={np.max(image)}")
-        # # print(f"Label (mask) range: min={np.min(label)}, max={np.max(label)}")
-        # print("--------------------------------------------------")
+
