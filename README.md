@@ -1,6 +1,6 @@
-# M^4^oE
+# M<sup>4</sup>oE
 
-The codes for the work "M^4^oE: Foundation Model for Medical Multimodal Image Segmentation with Mixture of Experts"(URL here). Our paper has been accepted by MICCAI 2024.
+The codes for the work "M<sup>4</sup>oE: Foundation Model for Medical Multimodal Image Segmentation with Mixture of Experts"(URL here). Our paper has been accepted by MICCAI 2024.
 
 ## 1. Pretrained Models: You can choose a pretrained model based on your preference.
 
