@@ -38,8 +38,6 @@ sh train.sh or python train.py --cfg configs/swin_tiny_patch4_window7_224_lite.y
 sh test.sh or python test.py --cfg configs/swin_tiny_patch4_window7_224_lite.yaml --is_saveni --volume_path your DATA_DIR --output_dir your OUT_DIR --max_epoch 150 --base_lr 0.05 --img_size 224 --batch_size 24
 ```
 
-## Reproducibility
-
 ## References
 
 * [SwinUnet](https://github.com/HuCaoFighting/Swin-Unet)
