@@ -1,6 +1,6 @@
 # M<sup>4</sup>oE
 
-The codes for the work "M<sup>4</sup>oE: Foundation Model for Medical Multimodal Image Segmentation with Mixture of Experts"(URL here). Our paper has been accepted by MICCAI 2024.
+The codes for the work "M<sup>4</sup>oE: Foundation Model for Medical Multimodal Image Segmentation with Mixture of Experts"([Arxiv](https://arxiv.org/abs/2405.09446)). Our paper has been accepted by MICCAI 2024.
 
 ## 1. Pretrained Models: You can choose a pretrained model based on your preference.
 
@@ -49,5 +49,10 @@ sh test.sh or python test.py --cfg configs/swin_tiny_patch4_window7_224_lite.yam
 ## Citation
 
 ```bibtex
-BibTex here
+@article{jiang2024m4oe,
+  title   = {M$^4$oE: A Foundation Model for Medical Multimodal Image Segmentation with Mixture of Experts},
+  author  = {Yufeng Jiang and Yiqing Shen},
+  year    = {2024},
+  journal = {arXiv preprint arXiv: 2405.09446}
+}
 ```
