@@ -55,7 +55,7 @@ sh test.sh or python test.py --cfg configs/swin_tiny_patch4_window7_224_lite.yam
         publisher = {Springer Nature Switzerland},
         volume = {LNCS 15012},
         month = {October},
-        page = {pending}
+        page = {621 -- 631}
 }
 
 ```
